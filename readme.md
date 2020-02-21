@@ -10,7 +10,6 @@ This is a simple Flashcards app. User can tap on question to see answer or guess
 ### App Walk-though
 <a href="https://imgflip.com/gif/3pwtlt"><img src="https://i.imgflip.com/3pwtlt.gif" title="made at imgflip.com"/></a>
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
 ## Required
 - [x] Create New Project in Xcode
 - [x] Add a view for the front side of the flashcard to display the question
