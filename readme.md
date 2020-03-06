@@ -8,7 +8,7 @@ This is a simple flashcards app. The user can now create a new flashcard with th
 ### App Walk-though
 `TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 <div style="width:260px;max-width:100%;"><div style="height:0;padding-bottom:81.92%;position:relative;"><iframe width="260" height="213" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameBorder="0" src="https://imgflip.com/embed/3rnu7v"></iframe></div><p><a href="https://imgflip.com/gif/3rnu7v">via Imgflip</a></p></div>
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<a href="https://imgflip.com/gif/3rnu7v"><img src="https://imgflip.com/gif/3rnue9" width=200><br>
 
 ## Required
 - [x] User can open the creation screen
