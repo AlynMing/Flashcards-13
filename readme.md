@@ -8,11 +8,7 @@
 This is a simple Flashcards app. User can tap on question to see answer or guess what the answer is choosing one of the three multiple choice options.
 
 ### App Walk-though
-<a href="https://imgflip.com/gif/3pwtlt"><img src="https://i.imgflip.com/3pwtlt.gif" title="made at imgflip.com"/></a>
-
-<img src="YOUR_GIF_URL_HERE" width=200><br>
-
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+<a href="https://imgflip.com/gif/3pwubk"><img src="https://i.imgflip.com/3pwubk.gif" title="made at imgflip.com"/></a>
 
 ## Required
 - [x] Create New Project in Xcode
