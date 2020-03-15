@@ -98,6 +98,28 @@
                                     <segue destination="3Jm-RO-SuG" kind="presentation" id="fEE-W4-CaD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-ps-tim">
+                                <rect key="frame" x="305" y="803" width="49" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HRG-Ra-Jr2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0d-bd-ngE">
+                                <rect key="frame" x="62" y="803" width="46" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Prev">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZhQ-rg-8k8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -106,9 +128,11 @@
                     <connections>
                         <outlet property="answer" destination="3jJ-HT-o0z" id="PrU-tG-aIQ"/>
                         <outlet property="card" destination="Qub-UL-HS3" id="eyH-eb-ETO"/>
+                        <outlet property="nextButton" destination="GdT-ps-tim" id="tcS-k0-cDo"/>
                         <outlet property="option1" destination="ZYf-BP-qJF" id="Wuq-R7-iLX"/>
                         <outlet property="option2" destination="zk6-qV-Fun" id="acW-bk-jH4"/>
                         <outlet property="option3" destination="FfH-vn-Sh9" id="fOr-7v-fb4"/>
+                        <outlet property="prevButton" destination="y0d-bd-ngE" id="oW2-WC-dLx"/>
                         <outlet property="question" destination="EYS-Zh-AAH" id="Igq-FG-UUe"/>
                     </connections>
                 </viewController>
