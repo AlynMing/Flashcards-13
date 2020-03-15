@@ -139,16 +139,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
-        print("current before next - \(currentIndex)")
         //increase current index
         currentIndex = currentIndex + 1
-        print("current after next - \(currentIndex)")
         //update labels
         updateLabels()
-        print("current after updatelabels - \(currentIndex)")
         //update buttons
         updateNextPrevButtons()
-        print("current after updatebuttons - \(currentIndex)")
 
     }
     
@@ -189,6 +185,12 @@ class ViewController: UIViewController {
         
         //get current flashcard
         let currentFlashcard = flashcards[currentIndex]
+        
+        //show all possible options
+        option1.isHidden = false
+        option2.isHidden = false
+        option3.isHidden = false
+        question.isHidden = false
         
         //update labels
         question.text = currentFlashcard.question
