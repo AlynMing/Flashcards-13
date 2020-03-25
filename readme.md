@@ -1,3 +1,20 @@
+## Lab 3
+
+### App Description
+This is a simple flashcards app where the user can create flashcards to study. The flashcards created by the user are saved in memory and can be edited.
+
+### App Walk-though
+<img src="http://g.recordit.co/IysFTsFgGr.gif" width=200><br>
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
+## Optional
+- [ ] User can delete a flashcard
+- [ ] User can edit existing flashcard
+- [ ] User can store multiple choice questions
+
 
 ## Lab 2
 
