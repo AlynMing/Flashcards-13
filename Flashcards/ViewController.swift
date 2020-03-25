@@ -64,6 +64,20 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //first we want the flashcard to be invisible and slightly smaller in size
+        card.alpha = 0.0
+        card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        //animation
+        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.card.alpha = 1.0
+            self.card.transform = CGAffineTransform.identity
+        })
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let navigationController = segue.destination as! UINavigationController
         
@@ -78,12 +92,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-
-        if(question.isHidden){
-            question.isHidden = false
-        }else{
-            question.isHidden = true
-        }
+        flipFlashcard()
+       
+    }
+    
+    func flipFlashcard() {
+        
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            if(self.question.isHidden){
+                self.question.isHidden = false
+            }else{
+                self.question.isHidden = true
+            }
+        })
+        
     }
     
     func updateFlashcard(newQuestion: String, newAnswer: String, extraAnswerOne: String, extraAnswerTwo: String, extraAnswerThree: String) {
@@ -117,14 +139,14 @@ class ViewController: UIViewController {
     
     @IBAction func didTapOptionOne(_ sender: Any) {
         if answer.text == option1.titleLabel?.text {
-            question.isHidden = true
+            flipFlashcard()
         }
         option1.isHidden = true
     }
     
     @IBAction func didTapOptionTwo(_ sender: Any) {
         if answer.text == option2.titleLabel?.text {
-            question.isHidden = true
+            flipFlashcard()
         }
         option2.isHidden = true
     }
@@ -133,7 +155,7 @@ class ViewController: UIViewController {
     
     @IBAction func didTapOptionThree(_ sender: Any) {
         if answer.text == option3.titleLabel?.text {
-            question.isHidden = true
+            flipFlashcard()
         }
         option3.isHidden = true
     }
@@ -142,9 +164,11 @@ class ViewController: UIViewController {
         //increase current index
         currentIndex = currentIndex + 1
         //update labels
-        updateLabels()
+        //updateLabels()
         //update buttons
         updateNextPrevButtons()
+        //animation for change of cards
+        animateCardOut(next: true)
 
     }
     
@@ -157,6 +181,42 @@ class ViewController: UIViewController {
         
         //update buttons
         updateNextPrevButtons()
+        
+        //animation for change of cards
+        animateCardOut(next: false)
+    }
+    
+    func animateCardOut(next: Bool){
+        var trans = 0.0
+        if next{
+            trans = -300.0
+        }else{
+            trans = 300.0
+        }
+            UIView.animate(withDuration: 0.3, animations: {
+                self.card.transform = CGAffineTransform.identity.translatedBy(x: CGFloat(trans), y: 0.0)
+            }, completion: { finished in
+                //update labels
+                self.updateLabels()
+                //call next animation
+                self.animateCardIn(next: next)
+            })
+        
+    }
+    
+    func animateCardIn(next: Bool){
+        var trans = 0.0
+        if next{
+            trans = 300.0
+        }else{
+            trans = -300.0
+        }
+        //move card position to the left/right side
+        card.transform = CGAffineTransform.identity.translatedBy(x: CGFloat(trans), y: 0.0)
+        //animate card entering to original position
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity
+        })
     }
     
     func updateNextPrevButtons(){
