@@ -5,7 +5,7 @@
 This is a simple flashcards app where the user can add their own flashcards and study them over a period of time.
 
 ### App Walk-though
-<img src="https://recordit.co/2ejU6XXgHf" width=200><br>
+<img src="https://recordit.co/2ejU6XXgHf.gif" width=200><br>
 
 ## Required
 - [x] User should see the app icon 
